@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgdiq7i6mo7bp"]
+
+[ext_resource type="PackedScene" uid="uid://ceq50i7eieg8n" path="res://Scene/player.tscn" id="1_m8x5s"]
+[ext_resource type="Script" uid="uid://bophiopo3l8xv" path="res://Scripts/camera.gd" id="2_nhyy2"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nhyy2"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
+position = Vector2(667, 375)
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("2_nhyy2")
+target = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("1_m8x5s")]
+position = Vector2(667, 375)
+scale = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(667, 475)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_nhyy2")

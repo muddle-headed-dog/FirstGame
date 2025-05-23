@@ -1,3 +1,4 @@
 {
-    "godotTools.editorPath.godot4": "c:\\Users\\wyb23\\Desktop\\Godot_v4.5-dev3_win64.exe\\Godot_v4.5-dev3_win64.exe"
+  "godotTools.editorPath.godot4": "c:\\Users\\wyb23\\Desktop\\Godot_v4.5-dev3_win64.exe\\Godot_v4.5-dev3_win64.exe",
+  "git.ignoreLimitWarning": true
 }
